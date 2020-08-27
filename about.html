@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang = "en" dir = "ltr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/html5reset.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Gochi Hand'rel='stylesheet'>
+	<title>Sause About Info</title>
+</head>
+	<body>
+		<a href="#content" class = "skip">Skip to content</a>
+			<nav id="navigation">
+				<img src="Images/sause_logo.png" alt="Sause Logo">
+				<ul>
+					<li><a href="home.html">Home</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="shop.html">Apparel</a></li>
+					<li><a href="accesories.html">Accesories</a></li>
+					<li><a href="collection.html">Collection</a></li>
+				</ul>
+			</nav>
+			<main id="content">
+					<h1>About</h1>
+						<div class="flip-card">
+						  <div class="flip-card-inner">
+						    <div class="flip-card-front">
+						      <img src="Images/sause_monster.jpg" alt="Sause Monster">
+						    </div>
+						    <div class="flip-card-back">
+						      <div class="flip-text">Sause is a streetwear clothing brand founded in Detroit, MI, designed to inspire style, confidence and humbleness. We don't want to create over confidence like high end brands and endorse our customers to get "Lost in the sause" and lose their humility. We strive to create a better world for everyone in the fashion industry and deliver top quality customer service by keeping it real, fun and sausy. Our mission is to sause up societal norms and become the world's favorite apparel one drip at a time.</div>
+						    </div>
+						  </div>
+						</div>
+						<div class="callout">
+						  <div class="callout-header">You want to know about the sause?</div>
+						  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+						  <div class="callout-container">
+								<div class="drop_text"> Touch the Sause Monster
+								</div>
+						  </div>
+						</div>
+			<footer>
+	    <p>Copyright &copy 2019 SAUSE</p>
+	    </footer>
+		</main>
+		<script>
+			const nav = document.querySelector('#navigation');
+			const navTop = nav.offsetTop;
+
+			function stickyNavigation() {
+			console.log('navTop = ' + navTop);
+			console.log('scrollY = ' + window.scrollY);
+
+				if (window.scrollY >= navTop) {
+					// nav offsetHeight = height of nav
+					document.body.style.paddingTop = nav.offsetHeight + 'px';
+					document.body.classList.add('fixed-nav');
+				} else {
+					document.body.style.paddingTop = 0;
+					document.body.classList.remove('fixed-nav');
+				}
+				}
+
+			window.addEventListener('scroll', stickyNavigation);
+		</script>
+	</body>
+</html>

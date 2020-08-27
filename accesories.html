@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang = "en" dir = "ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Gochi Hand'rel='stylesheet'>
+    <title>Sause Accesories</title>
+  </head>
+  <body>
+    <a href="#content" class = "skip">Skip to content</a>
+    <nav id="navigation">
+      <img src="Images/sause_logo.png" alt="Sause Logo">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Apparel</a></li>
+        <li><a href="accesories.html">Accesories</a></li>
+        <li><a href="collection.html">Collection</a></li>
+      </ul>
+    </nav>
+  <main id="content">
+    <h1> Accesories </h1>
+    <div class="accesories_container">
+      <p> Sause offers some of the best accesories in the world.</p>
+      <img src="Images/bag.jpg" alt="bag">
+      <img src="Images/bag1.jpg" alt="bag1">
+      <img src="Images/bag2.jpg" alt="bag2">
+      <img src="Images/bag3.jpg" alt="bag3">
+      <img src="Images/bag4.jpg" alt="bag4">
+      <img src="Images/phonecase.jpg" alt="phonecase">
+      <img src="Images/phonecase1.jpg" alt="phonecase1">
+      <img src="Images/phonecase2.jpg" alt="phonecase2">
+      <img src="Images/sause belt render 1.1.jpg" alt="belt1">
+      <img src="Images/sause belt render 2.jpg" alt="belt2">
+      <img src="Images/sause belt render 3.jpg" alt="belt3">
+      <img src="Images/sause belt render 4.jpg" alt="belt4">
+      <img src="Images/sause belt render 5.jpg" alt="belt5">
+      <img src="Images/sause belt render 6.jpg" alt="belt6">
+      <img src="Images/sause ring render 1.2.jpg" alt="ring1">
+      <img src="Images/sause ring render 1.8.jpg" alt="ring2">
+      <img src="Images/sause ring render 1.jpg" alt="ring3">
+      <img src="Images/sause ring render 2.3.jpg" alt="ring4">
+      <img src="Images/sause ring render 3.2.jpg" alt="ring5">
+      <img src="Images/sause ring render 3.jpg" alt="ring6">
+
+      <!--<video autoplay loop muted>
+      <source src="Videos/remix_animation.avi" type="video/avi">
+      </video> -->
+    </div>
+    <footer>
+    <p>Copyright &copy 2019 SAUSE</p>
+    </footer>
+  </main>
+  <script>
+    const nav = document.querySelector('#navigation');
+    const navTop = nav.offsetTop;
+
+    function stickyNavigation() {
+    console.log('navTop = ' + navTop);
+    console.log('scrollY = ' + window.scrollY);
+
+      if (window.scrollY >= navTop) {
+        // nav offsetHeight = height of nav
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
+      }
+      }
+
+    window.addEventListener('scroll', stickyNavigation);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang = "en" dir = "ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Gochi Hand'rel='stylesheet'>
+    <title>Sause Home</title>
+  </head>
+  <body onload="typeWriter()">
+    <a href="#content" class = "skip">Skip to content</a>
+    <nav id="navigation">
+      <img src="Images/sause_logo.png" alt="Sause Logo">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="shop.html">Apparel</a></li>
+        <li><a href="accesories.html">Accesories</a></li>
+        <li><a href="collection.html">Collection</a></li>
+      </ul>
+    </nav>
+    <main id="content">
+      <h1 id="sause_intro"></h1>
+    <div class="home_container">
+      <img src="Images/dope.png" alt="Dope">
+      <div class="home_text">
+        <p> Spring/Summer 2019 </br> </br>Sause</br>
+          New content, announcement and previews of the Spring/Summer 2019 collection coming soon. </p>
+      </div>
+    </div>
+    <footer>
+    <p>Copyright &copy 2019 SAUSE</p>
+    </footer>
+    <script>
+      var i = 0;
+      var txt = 'Welcome to Sause. We Boolin out here.';
+      var speed = 80;
+
+      function typeWriter() {
+        if (i < txt.length) {
+          document.getElementById("sause_intro").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+      }
+    </script>
+    <script>
+			const nav = document.querySelector('#navigation');
+			const navTop = nav.offsetTop;
+
+			function stickyNavigation() {
+			console.log('navTop = ' + navTop);
+			console.log('scrollY = ' + window.scrollY);
+
+				if (window.scrollY >= navTop) {
+					// nav offsetHeight = height of nav
+					document.body.style.paddingTop = nav.offsetHeight + 'px';
+					document.body.classList.add('fixed-nav');
+				} else {
+					document.body.style.paddingTop = 0;
+					document.body.classList.remove('fixed-nav');
+				}
+				}
+
+			window.addEventListener('scroll', stickyNavigation);
+		</script>
+  </main>
+  </body>
+</html>

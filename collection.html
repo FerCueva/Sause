@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang = "en" dir = "ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/html5reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Gochi Hand'rel='stylesheet'>
+    <title>Sause Project Gallery</title>
+  </head>
+  <body>
+    <a href="#content" class = "skip">Skip to content</a>
+      <nav id="navigation">
+        <img src="Images/sause_logo.png" alt="Sause Logo">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Apparel</a></li>
+          <li><a href="accesories.html">Accesories</a></li>
+          <li><a href="collection.html">Collection</a></li>
+        </ul>
+      </nav>
+    <main id="content">
+      <h1> Collection </h1>
+        <div class="collection_container">
+          <p> Drip too hard. </p>
+          <img src="Images/collectionsause.jpg" alt="collectionSause">
+          <img src="Images/collection_1.jpg" alt="collection_1">
+          <img src="Images/collection_2.jpg" alt="collection_2">
+          <img src="Images/collection_3.jpg" alt="collection_3">
+          <img src="Images/collection_4.jpg" alt="collection_4">
+          <img src="Images/collection_5.jpg" alt="collection_5">
+          <img src="Images/collection_6.jpg" alt="collection_6">
+        </div>
+  </main>
+  <footer>
+  <p>Copyright &copy 2019 SAUSE</p>
+  </footer>
+  <script>
+    const nav = document.querySelector('#navigation');
+    const navTop = nav.offsetTop;
+
+    function stickyNavigation() {
+    console.log('navTop = ' + navTop);
+    console.log('scrollY = ' + window.scrollY);
+
+      if (window.scrollY >= navTop) {
+        // nav offsetHeight = height of nav
+        document.body.style.paddingTop = nav.offsetHeight + 'px';
+        document.body.classList.add('fixed-nav');
+      } else {
+        document.body.style.paddingTop = 0;
+        document.body.classList.remove('fixed-nav');
+      }
+      }
+
+    window.addEventListener('scroll', stickyNavigation);
+  </script>
+  </body>
+</html>
